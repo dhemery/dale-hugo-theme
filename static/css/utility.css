@@ -1,0 +1,16 @@
+.inline {
+	display: inline;
+}
+
+.piped:not(:first-child)::before {
+	content: "|"
+}
+
+.subtle-link {
+	--decoration: none;
+}
+
+.subtle-link:hover,
+.subtle-link:focus {
+	--decoration: underline;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='{{ .SiteLanguageCode | default "en-us" }}'>
+
+<head>
+  <meta charset='utf-8' />
+  <meta viewport='width=device-width' />
+  <meta viewport='initial-scale=1' />
+  <meta viewport='user-scalable=yes' />
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <link href='/favicon.ico' rel='icon' />
+  <link rel='stylesheet' href='/css/style.css'>
+</head>
+
+<body>
+  <header class='body-header'>
+    <h1 class='body-title'>
+      <a class='subtle-link' href='/'>{{ .Site.Title }}</a>
+    </h1>
+    {{ block "body-subtitle" . }}{{ end }}
+  </header>
+  <nav class='body-info'>
+    <ul class='inline'>
+      {{ range .Site.Data.nav.link }}
+      <li class='inline piped'>
+        <a class='subtle-link' href="{{ .url }}">{{ .title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+  <main>
+    {{ block "main-header" . }}
+    <header class='main-header'>
+      <h1 class='main-title'>
+        <a class='subtle-link' href='{{ .Permalink }}'>{{ .Title }}</a>
+      </h1>
+    </header>
+    {{ end }}
+    {{ block "main-content" . }}
+    <section class='content'>
+      {{ .Content }}
+    </section>
+    {{ end }}
+  </main>
+  <footer class='body-info'>
+    {{ block "copyright" . }}
+    <p role='copyright'>{{ .Site.Copyright }}</p>
+    {{ end }}
+  </footer>
+</body>
+
+</html>

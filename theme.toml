@@ -1,0 +1,11 @@
+name = "Dale"
+license = "MIT"
+licenselink = "https://github.com/dhemery/dale-hugo-theme/blob/main/LICENSE"
+tags = []
+features = []
+min_version = "0.114.1"
+
+[author]
+name = "Dale Emery"
+homepage = "https://dhemery.com"
+
