@@ -13,11 +13,11 @@
 </head>
 
 <body>
-  <header class='banner'>
-    <p class='site-title'>
+  <header class='boxed banner'>
+    <p class='styled-text site-title'>
       <a class='subtle-link' href='/'>{{ .Site.Title }}</a>
     </p>
-    <nav class='site-nav'>
+    <nav class='styled-text site-nav'>
       <ul class='inline'>
         {{ range .Site.Data.nav.link }}
         <li class='inline piped'>
@@ -28,12 +28,12 @@
     </nav>
   </header>
   <main>
-    <h1 class='page-title'>
+    <h1 class='boxed styled-text page-title'>
       <a class='subtle-link' href='/'>{{ .Title }}</a>
     </h1>
     {{ block "main" . }}{{ end }}
   </main>
-  <footer class='site-footer'>
+  <footer class='boxed styled-text site-footer'>
     {{ block "copyright" . }}
     <p role='copyright'>{{ .Site.Copyright }}</p>
     {{ end }}

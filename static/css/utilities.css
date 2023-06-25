@@ -1,0 +1,36 @@
+@layer utilities {
+	.boxed {
+		--text-align: center;
+
+		border: var(--border);
+		background-color: var(--bg);
+		padding: var(--padding);
+		text-align: var(--text-align);
+	}
+
+	.styled-text {
+		color: var(--color);
+		font-size: var(--font-size);
+		font-weight: var(--font-weight);
+		font-variant: var(--font-variant);
+		line-height: var(--line-height);
+		margin: var(--margin);
+	}
+
+	.inline {
+		display: inline;
+	}
+
+	.piped:not(:first-child)::before {
+		content: "|"
+	}
+
+	.subtle-link {
+		--decoration: none;
+	}
+
+	.subtle-link:hover,
+	.subtle-link:focus {
+		--decoration: underline;
+	}
+}

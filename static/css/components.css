@@ -14,61 +14,40 @@
     --FONT-SIZE-5: calc(var(--FONT-SIZE-4) * var(--FONT-SCALE));
   }
 
-  .boxed,
-  .banner,
-  .page-title,
-  .site-footer {
-    --text-align: center;
-
-    border: var(--border);
-    background-color: var(--bg);
-    padding: var(--padding);
-    text-align: var(--text-align);
-  }
-
-  .styled-text,
-  .site-footer,
-  .site-nav,
-  .site-title,
-  .page-title {
-    color: var(--color);
-    font-size: var(--font-size);
-    font-weight: var(--font-weight);
-    font-variant: var(--font-variant);
-    line-height: var(--line-height);
-    margin: var(--margin);
-  }
-
   .banner {
     --bg: var(--COLOR-DARK);
     --color: var(--COLOR-LIGHT);
     --padding: 1rem;
   }
 
-  .page-title,
-  .site-title {
-    --font-variant: small-caps;
-    --line-height: 1.2;
-  }
+  .content> :where(:not(:first-child)) {
+    --sp: 1em;
 
-  .site-footer {
-    --bg: var(--COLOR-LIGHT);
-    --padding: var(--padding-tb);
-    --padding-tb: .25rem;
-    --color: var(--COLOR-MEDIUM);
-    --font-weight: bold;
-  }
-
-  .site-title {
-    --font-size: var(--FONT-SIZE-5);
+    margin-top: var(--sp);
   }
 
   .page-title {
     --bg: var(--COLOR-LIGHTER);
-    --padding: var(--padding-tb) 0;
-    --padding-tb: 0.5rem;
     --color: var(--COLOR-DARK);
     --font-size: var(--FONT-SIZE-4);
+    --font-variant: small-caps;
     --font-weight: bold;
+    --line-height: 1.2;
+    --padding: var(--padding-tb) 0;
+    --padding-tb: 0.5rem;
+  }
+
+  .site-footer {
+    --bg: var(--COLOR-LIGHT);
+    --color: var(--COLOR-MEDIUM);
+    --font-weight: bold;
+    --padding: var(--padding-tb);
+    --padding-tb: .25rem;
+  }
+
+  .site-title {
+    --font-size: var(--FONT-SIZE-5);
+    --font-variant: small-caps;
+    --line-height: 1.2;
   }
 }

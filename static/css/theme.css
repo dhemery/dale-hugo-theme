@@ -1,9 +1,9 @@
 @layer reset,
 base,
 components,
-properties;
+utilities;
 
 @import "reset.css";
 @import "base.css";
 @import "components.css";
-@import "properties.css";
+@import "utilities.css";

@@ -32,17 +32,20 @@
 
     background-color: var(--bg);
     margin: 0 auto;
-    max-width: var(--max-width);
   }
 
   main {
     --padding: var(--padding-tb) var(--padding-lr);
     --padding-lr: var(--USER-MAIN-PADDING);
     --padding-tb: 1rem;
+    --width: var(--USER-MAIN-WIDTH);
 
+    max-width: var(--width);
+    margin: 0 auto;
     color: var(--COLOR-DARK);
     padding: var(--padding);
   }
+
 
   a {
     --decoration: underline;
