@@ -1,19 +1,4 @@
 @layer components {
-  :root {
-    --COLOR-DARK: hsl(var(--USER-HUE) 100% 20%);
-    --COLOR-MEDIUM: hsl(var(--USER-HUE) 20% 50%);
-    --COLOR-LIGHT: hsl(var(--USER-HUE) 10% 92%);
-    --COLOR-LIGHTEST: hsl(var(--USER-HUE), 5%, 98.5%);
-
-    --FONT-FAMILY: Arial, Helvetica, sans-serif;
-    --FONT-SCALE: calc(4.0 / 3.0);
-    --FONT-SIZE-1: 1rem;
-    --FONT-SIZE-2: calc(var(--FONT-SIZE-1) * VAR(--FONT-SCALE));
-    --FONT-SIZE-3: calc(var(--FONT-SIZE-2) * VAR(--FONT-SCALE));
-    --FONT-SIZE-4: calc(var(--FONT-SIZE-3) * VAR(--FONT-SCALE));
-    --FONT-SIZE-5: calc(var(--FONT-SIZE-4) * var(--FONT-SCALE));
-  }
-
   .banner {
     --bg: var(--COLOR-DARK);
     --color: var(--COLOR-LIGHT);
