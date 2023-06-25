@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='{{ .SiteLanguageCode | default "en-us" }}'>
+<html lang='{{ .Site.LanguageCode | default "en-us" }}'>
 
 <head>
   <meta charset='utf-8' />
@@ -16,7 +16,9 @@
     <h1 class='body-title'>
       <a class='subtle-link' href='/'>{{ .Site.Title }}</a>
     </h1>
-    {{ block "body-subtitle" . }}{{ end }}
+    {{ block "body-subtitle" . }}
+    {{ partial "body-subtitle" . }}
+    {{ end }}
   </header>
   <nav class='body-info'>
     <ul class='inline'>
@@ -28,18 +30,7 @@
     </ul>
   </nav>
   <main>
-    {{ block "main-header" . }}
-    <header class='main-header'>
-      <h1 class='main-title'>
-        <a class='subtle-link' href='{{ .Permalink }}'>{{ .Title }}</a>
-      </h1>
-    </header>
-    {{ end }}
-    {{ block "main-content" . }}
-    <section class='content'>
-      {{ .Content }}
-    </section>
-    {{ end }}
+    {{ block "main" . }} {{ end }}
   </main>
   <footer class='body-info'>
     {{ block "copyright" . }}
