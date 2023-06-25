@@ -82,9 +82,9 @@ a {
 }
 
 .boxed,
-.body-header,
-.main-header,
-.body-info {
+.banner,
+.page-title,
+.site-footer {
   --text-align: center;
 
   border: var(--border);
@@ -94,10 +94,10 @@ a {
 }
 
 .styled-text,
-.body-info,
-.body-title,
-.body-subtitle,
-.main-title {
+.site-footer,
+.site-nav,
+.site-title,
+.page-title {
   color: var(--color);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
@@ -106,20 +106,19 @@ a {
   margin: var(--margin);
 }
 
-.body-header {
+.banner {
   --bg: var(--COLOR-DARK);
   --color: var(--COLOR-LIGHT);
   --padding: 1rem;
 }
 
-.body-subtitle,
-.body-title,
-.main-title {
+.page-title,
+.site-title {
   --font-variant: small-caps;
   --line-height: 1.2;
 }
 
-.body-info {
+.site-footer {
   --bg: var(--COLOR-LIGHT);
   --padding: var(--padding-tb);
   --padding-tb: .25rem;
@@ -127,21 +126,14 @@ a {
   --font-weight: bold;
 }
 
-.body-subtitle {
-  --font-size: var(--FONT-SIZE-4);
-}
-
-.body-title {
+.site-title {
   --font-size: var(--FONT-SIZE-5);
 }
 
-.main-header {
+.page-title {
   --bg: var(--COLOR-LIGHTER);
   --padding: var(--padding-tb) 0;
   --padding-tb: 0.5rem;
-}
-
-.main-title {
   --color: var(--COLOR-DARK);
   --font-size: var(--FONT-SIZE-4);
   --font-weight: bold;

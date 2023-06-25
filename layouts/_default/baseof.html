@@ -12,27 +12,27 @@
 </head>
 
 <body>
-  <header class='body-header'>
-    <h1 class='body-title'>
+  <header class='banner'>
+    <p class='site-title'>
       <a class='subtle-link' href='/'>{{ .Site.Title }}</a>
-    </h1>
-    {{ block "body-subtitle" . }}
-    {{ partial "body-subtitle" . }}
-    {{ end }}
+    </p>
+    <nav class='site-nav'>
+      <ul class='inline'>
+        {{ range .Site.Data.nav.link }}
+        <li class='inline piped'>
+          <a class='subtle-link' href="{{ .url }}">{{ .title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
   </header>
-  <nav class='body-info'>
-    <ul class='inline'>
-      {{ range .Site.Data.nav.link }}
-      <li class='inline piped'>
-        <a class='subtle-link' href="{{ .url }}">{{ .title }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
   <main>
-    {{ block "main" . }} {{ end }}
+    <h1 class='page-title'>
+      <a class='subtle-link' href='/'>{{ .Title }}</a>
+    </h1>
+    {{ block "main" . }}{{ end }}
   </main>
-  <footer class='body-info'>
+  <footer class='site-footer'>
     {{ block "copyright" . }}
     <p role='copyright'>{{ .Site.Copyright }}</p>
     {{ end }}
