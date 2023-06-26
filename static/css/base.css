@@ -42,7 +42,6 @@
 
     max-width: var(--width);
     margin: 0 auto;
-    color: var(--COLOR-DARK);
     padding: var(--padding);
   }
 
@@ -50,7 +49,6 @@
   a {
     --decoration: underline;
 
-    color: var(--color);
     text-decoration: var(--decoration);
   }
 
@@ -84,8 +82,6 @@
   }
 
   :is(h1, h2, h3, h4, h5, h6) {
-    --color: var(--COLOR-DARK);
-
     font-size: var(--font-size);
     font-weight: bold;
     color: var(--color);
