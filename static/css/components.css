@@ -5,7 +5,7 @@
     --padding: 1rem;
   }
 
-  .content> :where(:not(:first-child)) {
+  .flow-text> :where(:not(:first-child)) {
     --sp: 1em;
 
     margin-top: var(--sp);
@@ -23,11 +23,21 @@
   }
 
   .site-footer {
-    --bg: var(--COLOR-LIGHT);
-    --color: var(--COLOR-MEDIUM);
+    --bg: var(--COLOR-DARK);
+    --color: var(--COLOR-LIGHT);
     --font-weight: bold;
     --padding: var(--padding-tb);
     --padding-tb: .25rem;
+  }
+
+  .site-nav,
+  .site-nav-list,
+  .site-nav-item {
+    display: inline;
+  }
+
+  .site-nav-item:is(:not(:first-child))::before {
+    content: '|'
   }
 
   .site-title {

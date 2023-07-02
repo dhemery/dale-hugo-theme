@@ -17,14 +17,6 @@
 		margin: var(--margin);
 	}
 
-	.inline {
-		display: inline;
-	}
-
-	.piped:not(:first-child)::before {
-		content: "|"
-	}
-
 	.subtle-link {
 		--decoration: none;
 	}

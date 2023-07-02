@@ -18,9 +18,9 @@
       <a class='subtle-link' href='/'>{{ .Site.Title }}</a>
     </p>
     <nav class='styled-text site-nav'>
-      <ul class='inline'>
+      <ul class='site-nav-list'>
         {{ range .Site.Data.nav.link }}
-        <li class='inline piped'>
+        <li class='site-nav-item'>
           <a class='subtle-link' href="{{ .url }}">{{ .title }}</a>
         </li>
         {{ end }}
