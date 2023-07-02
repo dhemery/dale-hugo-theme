@@ -27,16 +27,9 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <h1 class='boxed styled-text page-title'>
-      <a class='subtle-link' href='/'>{{ .Title }}</a>
-    </h1>
-    {{ block "main" . }}{{ end }}
-  </main>
+  {{ block "main" . }}{{ end }}
   <footer class='boxed styled-text site-footer'>
-    {{ block "copyright" . }}
-    <p role='copyright'>{{ .Site.Copyright }}</p>
-    {{ end }}
+    <p role='copyright'>{{ block "copyright" . }}{{ .Site.Copyright }}{{ end }}</p>
   </footer>
 </body>
 
