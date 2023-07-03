@@ -4,6 +4,10 @@
 {{ define "main" }}
 <main>
   {{ partial "main-title" . }}
-  {{ partial "blog/tag-list" .Site.Taxonomies.tags.Alphabetical }}
+  <ul class='styled-list term-list'>
+    {{ range .Site.Taxonomies.tags.Alphabetical }}
+    <li><a href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a></li>
+    {{- end }}
+  </ul>
 </main>
 {{ end }}

@@ -18,10 +18,10 @@
     <p class='styled-text site-title'>
       <a class='subtle-link' href='/'>{{ .Site.Title }}</a>
     </p>
-    <nav class='styled-text site-nav'>
-      <ul class='site-nav-list'>
+    <nav class='site-nav'>
+      <ul class='styled-list site-nav-list'>
         {{ range .Site.Data.nav.link }}
-        <li class='site-nav-item'>
+        <li>
           <a class='subtle-link' href="{{ .url }}">{{ .title }}</a>
         </li>
         {{ end }}

@@ -8,6 +8,23 @@
 		text-align: var(--text-align);
 	}
 
+	.styled-list {
+		color: var(--color);
+		display: var(--list-display);
+		list-style-type: var(--list-style-type);
+		padding: var(--list-padding);
+	}
+
+	.styled-list> :where(li) {
+		display: var(--list-item-display);
+		font-variant: var(--list-font-variant);
+
+	}
+
+	.styled-list> :where(li):not(:first-child)::before {
+		content: var(--list-item-separator);
+	}
+
 	.styled-text {
 		color: var(--color);
 		font-size: var(--font-size);
@@ -19,6 +36,7 @@
 
 	.subtle-link {
 		--decoration: none;
+		color: var(--color);
 	}
 
 	.subtle-link:hover,

@@ -1,24 +1,30 @@
 @layer components {
-  .post-list {}
-
-  .post-list-item {}
+  .post {}
 
   .post-details {
-    --post-detail-text-size: var(--FONT-SIZE-1);
-
-    font-size: var(--post-detail-text-size);
+    --list-display: inline;
+    --list-item-display: inline;
+    --list-item-separator: ' | ';
+    --list-padding: 0;
+    --list-style-type: none;
   }
 
-  .tag-list {
-    list-style-type: none;
-    display: inline;
+  .post-header {}
+
+  .post-item {
+    ---font-size: var(--FONT-SIZE-0);
   }
 
-  .tag {
-    display: inline;
-  }
+  .post-item-title {}
 
-  .tag:not(:first-child)::before {
-    content: ' | ';
+  .post-list {}
+
+  .term-list {
+    --list-display: inline;
+    --list-font-variant: small-caps;
+    --list-item-display: inline;
+    --list-item-separator: ' | ';
+    --list-padding: 0;
+    --list-style-type: none;
   }
 }

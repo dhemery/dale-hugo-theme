@@ -2,13 +2,10 @@
 {{ partial "blog/style" . }}
 {{ end }}
 {{ define "main" }}
-<main>
-  <hgroup class='post-header'>
-    {{ partial "main-title" . }}
-    {{ partial "blog/post-details" . }}
-  </hgroup>
+<main class='post'>
+  {{ partial "blog/post-header" . }}
   {{ with .Content }}
-  <div class='flow-text'>{{ . }}</div>
+  <div class='post-content flow-text'>{{ . }}</div>
   {{ end }}
 </main>
 {{ end }}

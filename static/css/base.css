@@ -7,6 +7,7 @@
 
     --FONT-FAMILY: Arial, Helvetica, sans-serif;
     --FONT-SCALE: calc(4.0 / 3.0);
+    --FONT-SIZE-0: calc(var(--FONT-SIZE-1) / VAR(--FONT-SCALE));
     --FONT-SIZE-1: 1rem;
     --FONT-SIZE-2: calc(var(--FONT-SIZE-1) * VAR(--FONT-SCALE));
     --FONT-SIZE-3: calc(var(--FONT-SIZE-2) * VAR(--FONT-SCALE));

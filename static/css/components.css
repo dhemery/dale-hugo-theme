@@ -30,14 +30,15 @@
     --padding-tb: .25rem;
   }
 
-  .site-nav,
-  .site-nav-list,
-  .site-nav-item {
-    display: inline;
+  .site-nav {
+    --color: var(--COLOR-LIGHT);
   }
 
-  .site-nav-item:is(:not(:first-child))::before {
-    content: '|'
+  .site-nav-list {
+    --list-display: inline;
+    --list-style-type: inline;
+    --list-item-separator: ' | ';
+    --list-font-variant: small-caps;
   }
 
   .site-title {
