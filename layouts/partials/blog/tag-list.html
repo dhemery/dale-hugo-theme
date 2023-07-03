@@ -1,0 +1,5 @@
+<ul class='tag-list'>
+	{{ range . -}}
+	<li class='tag'><a href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a></li>
+	{{- end }}
+</ul>

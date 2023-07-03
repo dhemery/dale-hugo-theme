@@ -1,17 +1,16 @@
-{{ define "dateline" }}
-<div class='post-details'>
-    {{ dateFormat "Jan 2, 2006" .Date }} | Tags:
-    <ul class='inline'>
-        {{ range (.GetTerms "tags") -}}
-        <li><a href='{{ .Permalink }}'>{{ .LinkTitle -}}</a></li>
-        {{- end }}
-    </ul>
-</div>{{ end }}
-
-{{ define "main" }}
-{{ with .Content }}
-<section>{{ . }}</section>
+{{ define "head-extras" }}
+{{ partial "blog/style" . }}
 {{ end }}
+{{ define "main" }}
+<main>
+  <hgroup class='post-header'>
+    {{ partial "main-title" . }}
+    {{ partial "blog/post-details" . }}
+  </hgroup>
+  {{ with .Content }}
+  <div class='flow-text'>{{ . }}</div>
+  {{ end }}
+</main>
 {{ end }}
 
 {{ define "copyright" }}

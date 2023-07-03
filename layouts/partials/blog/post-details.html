@@ -1,0 +1,4 @@
+<div class='post-details fred'>
+	{{ dateFormat "Jan 2, 2006" .Date }} | Tags:
+	{{ partial "blog/tag-list" (.GetTerms "tags") }}
+</div>

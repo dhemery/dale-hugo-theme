@@ -1,7 +1,9 @@
+{{ define "head-extras" }}
+{{ partial "blog/style" . }}
+{{ end }}
 {{ define "main" }}
-<ul class='tag-list '>
-  {{ range .Site.Taxonomies.tags.Alphabetical }}
-  <li><a href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a></li>
-  {{ end }}
-</ul>
+<main>
+  {{ partial "main-title" . }}
+  {{ partial "blog/tag-list" .Site.Taxonomies.tags.Alphabetical }}
+</main>
 {{ end }}

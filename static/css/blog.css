@@ -19,6 +19,6 @@
   }
 
   .tag:not(:first-child)::before {
-    content: '|';
+    content: ' | ';
   }
 }
