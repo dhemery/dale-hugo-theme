@@ -4,9 +4,7 @@
 {{ define "main" }}
 <main class='post'>
   {{ partial "blog/post-header" . }}
-  {{ with .Content }}
-  <div class='post-content flow-text'>{{ . }}</div>
-  {{ end }}
+  <div class='boxed post-content flow-text'>{{ .Content }}</div>
 </main>
 {{ end }}
 

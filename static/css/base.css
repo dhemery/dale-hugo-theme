@@ -16,7 +16,6 @@
   }
 
   html {
-    --bg: var(--COLOR-MEDIUM);
     --font-family: var(--FONT-FAMILY);
     --font-size: var(--FONT-SIZE-1);
     --line-height: 1.5;
@@ -28,47 +27,41 @@
   }
 
   body {
-    --bg: var(--COLOR-LIGHTEST);
-    --max-width: var(--USER-BODY-WIDTH);
+    --body-bg: var(--COLOR-LIGHTEST);
 
-    background-color: var(--bg);
-    margin: 0 auto;
+    background-color: var(--body-bg);
+    margin-block: var(--body-margin-block, 0);
+    margin-inline: var(--body-margin-inline, auto);
   }
 
   main {
-    --padding: var(--padding-tb) var(--padding-lr);
-    --padding-lr: var(--USER-MAIN-PADDING);
-    --padding-tb: 1rem;
-    --width: var(--USER-MAIN-WIDTH);
-
-    max-width: var(--width);
-    margin: 0 auto;
-    padding: var(--padding);
+    margin-block: var(--main-margin-block);
+    margin-inline: var(--main-margin-inline);
+    max-width: var(--main-width, var(--USER-MAIN-WIDTH));
+    padding-block: var(--main-padding-block);
+    padding-inline: var(--main-padding-inline);
   }
 
 
   a {
-    --decoration: underline;
+    --link-color: var(--color);
 
-    text-decoration: var(--decoration);
-  }
-
-  a[href]:hover,
-  a[href]:focus) {
-    --decoration: underline;
+    color: var(--link-color);
   }
 
   blockquote {
-    --bg: var(--COLOR-LIGHT);
-    --border: 1px solid var(--border-color);
-    --border-color: var(--COLOR-MEDIUM);
-    --padding: 1rem;
-    --color: var(--COLOR-DARK);
+    --blockquote-bg: var(--COLOR-LIGHT);
+    --blockquote-border: 1px solid var(--border-color);
+    --blockquote-border-color: var(--COLOR-MEDIUM);
+    --blockquote-color: var(--COLOR-DARK);
+    --blockquote-padding-block: 1rem;
+    --blockquote-padding-inline: 0;
 
-    background-color: var(--bg);
-    border: var(--border);
-    color: var(--color);
-    padding: var(--padding);
+    background-color: var(--blockquote-bg);
+    border: var(--blockquote-border);
+    color: var(--blockquote-color);
+    padding-block: var(--blockquote-padding-block);
+    padding-inline: var(--blockquote-padding-inline);
   }
 
   :is(blockquote, em),
@@ -105,9 +98,9 @@
   }
 
   :is(ul, ol) {
-    --padding-left: 2rem;
+    --list-padding-start: 2rem;
 
-    padding-left: var(--padding-left);
+    padding-left: var(--list-padding-start);
   }
 
   strong {

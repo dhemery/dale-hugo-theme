@@ -2,17 +2,17 @@
   .post {}
 
   .post-details {
-    --list-display: inline;
-    --list-item-display: inline;
-    --list-item-separator: ' | ';
-    --list-padding: 0;
+    --list-style-display: inline;
+    --list-styliiitem-display: inline;
+    --list-style-item-separator: ' | ';
+    --list-style-padding: 0;
     --list-style-type: none;
   }
 
   .post-header {}
 
   .post-item {
-    ---font-size: var(--FONT-SIZE-0);
+    --text-style-font-size: var(--FONT-SIZE-0);
   }
 
   .post-item-title {}
@@ -20,11 +20,14 @@
   .post-list {}
 
   .term-list {
-    --list-display: inline;
-    --list-font-variant: small-caps;
-    --list-item-display: inline;
-    --list-item-separator: ' | ';
-    --list-padding: 0;
+    --list-style-display: inline;
+    --list-style-item-display: inline;
+    --list-style-item-separator: ' | ';
+    --list-style-padding: 0;
     --list-style-type: none;
+  }
+
+  .term-text {
+    --text-style-font-variant: small-caps;
   }
 }

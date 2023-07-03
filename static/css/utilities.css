@@ -1,46 +1,45 @@
 @layer utilities {
 	.boxed {
-		--text-align: center;
+		background-color: var(--box-bg);
+		border: var(--box-border);
+		margin-block: var(--box-margin-block);
+		margin-inline: var(--box-margin-inline);
+		padding-block: var(--box-padding-block);
+		padding-inline: var(--box-padding-inline);
+	}
 
-		border: var(--border);
-		background-color: var(--bg);
-		padding: var(--padding);
-		text-align: var(--text-align);
+	.styled-link {
+		--link-style-decoration: underline;
+
+		color: var(--link-style-color, var(--color));
+		text-decoration: var(--link-style-decoration);
 	}
 
 	.styled-list {
-		color: var(--color);
-		display: var(--list-display);
+		display: var(--list-style-display);
 		list-style-type: var(--list-style-type);
-		padding: var(--list-padding);
+		padding-block: var(--list-style-padding-block);
+		padding-inline: var(--list-style-padding-inline);
 	}
 
-	.styled-list> :where(li) {
-		display: var(--list-item-display);
-		font-variant: var(--list-font-variant);
-
+	.styled-list>li {
+		display: var(--list-style-item-display);
 	}
 
-	.styled-list> :where(li):not(:first-child)::before {
-		content: var(--list-item-separator);
+	.styled-list>li:not(:first-child)::before {
+		content: var(--list-style-item-separator);
 	}
 
 	.styled-text {
-		color: var(--color);
-		font-size: var(--font-size);
-		font-weight: var(--font-weight);
-		font-variant: var(--font-variant);
-		line-height: var(--line-height);
-		margin: var(--margin);
+		color: var(--text-style-color);
+		font-size: var(--text-style-font-size);
+		font-weight: var(--text-style-font-weight);
+		font-variant: var(--text-style-font-variant);
+		line-height: var(--text-style-line-height);
+		text-align: var(--text-style-align);
 	}
 
-	.subtle-link {
-		--decoration: none;
-		color: var(--color);
-	}
-
-	.subtle-link:hover,
-	.subtle-link:focus {
-		--decoration: underline;
+	.subtle-link:not(:hover, :focus) {
+		--link-style-decoration: none;
 	}
 }

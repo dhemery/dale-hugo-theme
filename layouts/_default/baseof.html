@@ -14,23 +14,25 @@
 </head>
 
 <body>
-  <header class='boxed banner'>
-    <p class='styled-text site-title'>
-      <a class='subtle-link' href='/'>{{ .Site.Title }}</a>
-    </p>
-    <nav class='site-nav'>
+  <header class='boxed site-banner-box'>
+    <div class='styled-text site-title-text'>
+      <a class='styled-link subtle-link' href='/'>{{ .Site.Title }}</a>
+    </div>
+    <nav class='styled-text site-nav-text'>
       <ul class='styled-list site-nav-list'>
         {{ range .Site.Data.nav.link }}
         <li>
-          <a class='subtle-link' href="{{ .url }}">{{ .title }}</a>
+          <a class='styled-link subtle-link' href="{{ .url }}">{{ .title }}</a>
         </li>
         {{ end }}
       </ul>
     </nav>
   </header>
   {{ block "main" . }}{{ end }}
-  <footer class='boxed styled-text site-footer'>
-    <p role='copyright'>{{ block "copyright" . }}{{ .Site.Copyright }}{{ end }}</p>
+  <footer class='boxed site-footer-box'>
+    <div class='styled-text site-footer-text' role='copyright'>
+      {{ block "copyright" . }}{{ .Site.Copyright }}{{ end }}
+    </div>
   </footer>
 </body>
 

@@ -1,49 +1,65 @@
 @layer components {
-  .banner {
-    --bg: var(--COLOR-DARK);
-    --color: var(--COLOR-LIGHT);
-    --padding: 1rem;
+
+  .flow-box {
+    --box-margin-inline: auto;
+    --box-max-width: var(--USER-FLOW-WIDTH);
   }
 
-  .flow-text> :where(:not(:first-child)) {
-    --sp: 1em;
+  .flow-box>* {
+    --flow-box-block-spacing: 1em;
 
-    margin-top: var(--sp);
+    margin-block-start: var(--flow-box-block-spacing);
   }
 
-  .page-title {
-    --bg: var(--COLOR-LIGHTER);
-    --color: var(--COLOR-DARK);
-    --font-size: var(--FONT-SIZE-4);
-    --font-variant: small-caps;
-    --font-weight: bold;
-    --line-height: 1.2;
-    --padding: var(--padding-tb) 0;
-    --padding-tb: 0.5rem;
+  .page-header-box {
+    --box-margin-inline: auto;
+    --box-max-width: var(--USER-FLOW-WIDTH);
   }
 
-  .site-footer {
-    --bg: var(--COLOR-DARK);
-    --color: var(--COLOR-LIGHT);
-    --font-weight: bold;
-    --padding: var(--padding-tb);
-    --padding-tb: .25rem;
+  .page-title-text {
+    --box-bg: var(--COLOR-LIGHTER);
+    --box-padding-block: 0.5rem;
+    --text-style-color: var(--COLOR-DARK);
+    --text-style-font-size: var(--FONT-SIZE-4);
+    --text-style-font-variant: small-caps;
+    --text-style-font-weight: bold;
+    --text-style-line-height: 1.2;
   }
 
-  .site-nav {
-    --color: var(--COLOR-LIGHT);
+  .site-banner-box {
+    --box-bg: var(--COLOR-DARK);
+    --box-padding-block: 1rem;
+    --box-padding-inline: 1rem;
+    --text-style-align: center;
+  }
+
+  .site-footer-box {
+    --box-bg: var(--COLOR-DARK);
+    --box-padding-block: .25rem;
+  }
+
+  .site-footer-text {
+    --text-style-color: var(--COLOR-LIGHT);
+    --text-style-font-weight: bold;
+    --text-style-align: center;
+  }
+
+  .site-nav-text {
+    --text-style-color: var(--COLOR-LIGHT);
   }
 
   .site-nav-list {
-    --list-display: inline;
+    --list-style-display: inline;
     --list-style-type: inline;
-    --list-item-separator: ' | ';
-    --list-font-variant: small-caps;
+    --list-style-item-separator: ' | ';
+    --list-style-font-variant: small-caps;
   }
 
-  .site-title {
-    --font-size: var(--FONT-SIZE-5);
-    --font-variant: small-caps;
-    --line-height: 1.2;
+  .site-title-text {
+    --link-style-color: var(--text-style-color);
+    --text-style-color: var(--COLOR-LIGHT);
+    --text-style-font-size: var(--FONT-SIZE-5);
+    --text-style-font-variant: small-caps;
+    --text-style-line-height: 1.2;
   }
 }
