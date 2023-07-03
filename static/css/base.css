@@ -35,11 +35,14 @@
   }
 
   main {
-    margin-block: var(--main-margin-block);
-    margin-inline: var(--main-margin-inline);
-    max-width: var(--main-width, var(--USER-MAIN-WIDTH));
-    padding-block: var(--main-padding-block);
-    padding-inline: var(--main-padding-inline);
+    --main-padding-block: 1rem;
+    --main-padding-inline: 1rem;
+    --main-max-width: calc(var(--USER-FLOW-WIDTH) + 2 * var(--main-padding-block));
+
+    margin-inline: var(--main-margin-inline, auto);
+    max-width: var(--main-max-width);
+    padding-block: var(--main-padding-block, 1rem);
+    padding-inline: var(--main-padding-inline, 1rem);
   }
 
 

@@ -1,11 +1,6 @@
 @layer components {
 
-  .flow-box {
-    --box-margin-inline: auto;
-    --box-max-width: var(--USER-FLOW-WIDTH);
-  }
-
-  .flow-box>* {
+  .flow-text>* {
     --flow-box-block-spacing: 1em;
 
     margin-block-start: var(--flow-box-block-spacing);

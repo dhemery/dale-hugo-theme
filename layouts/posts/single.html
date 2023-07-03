@@ -2,9 +2,9 @@
 {{ partial "blog/style" . }}
 {{ end }}
 {{ define "main" }}
-<main class='post'>
+<main>
   {{ partial "blog/post-header" . }}
-  <div class='boxed post-content flow-text'>{{ .Content }}</div>
+  <div class='flow-text'>{{ .Content }}</div>
 </main>
 {{ end }}
 

@@ -37,6 +37,7 @@
 		font-variant: var(--text-style-font-variant);
 		line-height: var(--text-style-line-height);
 		text-align: var(--text-style-align);
+		text-transform: var(--text-style-transform);
 	}
 
 	.subtle-link:not(:hover, :focus) {
