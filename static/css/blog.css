@@ -1,0 +1,24 @@
+@layer components {
+  .post-list {}
+
+  .post-list-item {}
+
+  .post-details {
+    --post-detail-text-size: var(--FONT-SIZE-1);
+
+    font-size: var(--post-detail-text-size);
+  }
+
+  .tag-list {
+    list-style-type: none;
+    display: inline;
+  }
+
+  .tag {
+    display: inline;
+  }
+
+  .tag:not(:first-child)::before {
+    content: '|';
+  }
+}

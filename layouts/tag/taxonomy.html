@@ -1,0 +1,9 @@
+{{ define "head-extras" }}
+<link rel='stylesheet' href='/css/blog.css'>
+{{ end }}
+{{ define "main" }}
+<main>
+  {{ partial "main-title" . }}
+  {{ partial "blog/post-list" .Pages.ByTitle }}
+</main>
+{{ end }}
