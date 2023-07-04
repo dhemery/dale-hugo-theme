@@ -2,8 +2,11 @@
 {{ partial "post/style" . }}
 {{ end }}
 {{ define "main" }}
-<main>
-  {{ partial "post/page-header" . }}
+<main class='post-page'>
+  <hgroup class='post-page-header'>
+    {{ partial "main-title" . }}
+    {{ partial "post/details" . }}
+  </hgroup>
   <div class='flow-text'>{{ .Content }}</div>
 </main>
 {{ end }}

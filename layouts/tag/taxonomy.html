@@ -2,8 +2,8 @@
 {{ partial "post/style" .}}
 {{ end }}
 {{ define "main" }}
-<main>
+<main class='taxonomy-page'>
   {{ partial "main-title" . }}
-  {{ partial "post/summaries" .Pages.ByTitle }}
+  {{ partial "post/summary-list" .Pages.ByTitle }}
 </main>
 {{ end }}

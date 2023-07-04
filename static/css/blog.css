@@ -11,15 +11,15 @@
     --text-style-transform: capitalize;
   }
 
-  .post-header {}
+  .post-page-header {}
 
-  .post-item {
+  .post-summary {
     --text-style-font-size: var(--FONT-SIZE-0);
   }
 
-  .post-item-title {}
+  .post-summary-list {}
 
-  .post-list {}
+  .post-summary-title {}
 
   .term-list {
     --list-style-display: inline;

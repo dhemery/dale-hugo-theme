@@ -2,10 +2,8 @@
 {{ partial "post/style" .}}
 {{ end }}
 {{ define "main" }}
-<main>
+<main class='post-section'>
   {{ partial "main-title" . }}
-  {{ range .Pages.ByDate.Reverse }}
-  {{ .Render "summary" }}
-  {{ end }}
+  {{ partial "post/summary-list" .Pages.ByDate.Reverse }}
 </main>
 {{ end }}

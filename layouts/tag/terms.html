@@ -2,7 +2,7 @@
 {{ partial "post/style" . }}
 {{ end }}
 {{ define "main" }}
-<main>
+<main class='term-list-page'>
   {{ partial "main-title" . }}
   <ul class='styled-list term-list'>
     {{ range .Site.Taxonomies.tags.Alphabetical }}
