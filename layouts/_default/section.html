@@ -1,1 +1,8 @@
-{{ define "main" }}{{ partial "main" . }}{{ end }}
+{{ define "main" }}
+<main class='default-section-page'>
+  {{ partial "main-title" . }}
+  {{ range .Pages }}
+  {{ .Render "summary" }}
+  {{ end }}
+</main>
+{{ end }}

@@ -1,8 +1,5 @@
-{{ define "head-extras" }}
-{{ partial "post/style" . }}
-{{ end }}
 {{ define "main" }}
-<main class='term-list-page'>
+<main class='tag-terms-page'>
   {{ partial "main-title" . }}
   <ul class='styled-list term-list'>
     {{ range .Site.Taxonomies.tags.Alphabetical }}

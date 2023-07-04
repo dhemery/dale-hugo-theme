@@ -1,8 +1,5 @@
-{{ define "head-extras" }}
-{{ partial "post/style" .}}
-{{ end }}
 {{ define "main" }}
-<main class='post-section'>
+<main class='post-section-page'>
   {{ partial "main-title" . }}
   {{ partial "post/summary-list" .Pages.ByDate.Reverse }}
 </main>

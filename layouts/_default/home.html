@@ -1,1 +1,6 @@
-{{ define "main" }}{{ partial "main" . }}{{ end }}
+{{ define "main" }}
+<main class='default-home-page'>
+  {{ partial "main-title" . }}
+  {{ partial "flow-text" .Content }}
+</main>
+{{ end }}
