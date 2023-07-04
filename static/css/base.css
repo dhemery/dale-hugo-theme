@@ -82,6 +82,7 @@
     font-size: var(--font-size);
     font-weight: bold;
     color: var(--color);
+    line-height: 1.2em;
   }
 
   h1 {
