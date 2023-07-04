@@ -1,9 +1,13 @@
 @layer components {
 
   .flow-text>* {
-    --flow-box-block-spacing: 1em;
+    --flow-text-block-spacing: 1em;
 
-    margin-block-start: var(--flow-box-block-spacing);
+    margin-block-start: var(--flow-text-block-spacing);
+  }
+
+  .flow-text blockquote>:not(:first-child) {
+    margin-block-start: var(--flow-text-block-spacing);
   }
 
   .page-header-box {
