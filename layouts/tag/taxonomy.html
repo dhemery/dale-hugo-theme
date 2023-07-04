@@ -1,9 +1,9 @@
 {{ define "head-extras" }}
-{{ partial "blog/style" .}}
+{{ partial "post/style" .}}
 {{ end }}
 {{ define "main" }}
 <main>
   {{ partial "main-title" . }}
-  {{ partial "blog/post-list" .Pages.ByTitle }}
+  {{ partial "post/summaries" .Pages.ByTitle }}
 </main>
 {{ end }}

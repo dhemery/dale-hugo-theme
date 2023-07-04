@@ -1,9 +1,11 @@
 {{ define "head-extras" }}
-{{ partial "blog/style" .}}
+{{ partial "post/style" .}}
 {{ end }}
 {{ define "main" }}
 <main>
   {{ partial "main-title" . }}
-  {{ partial "blog/post-list" .Pages.ByDate.Reverse }}
+  {{ range .Pages.ByDate.Reverse }}
+  {{ .Render "summary" }}
+  {{ end }}
 </main>
 {{ end }}

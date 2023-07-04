@@ -1,9 +1,9 @@
 {{ define "head-extras" }}
-{{ partial "blog/style" . }}
+{{ partial "post/style" . }}
 {{ end }}
 {{ define "main" }}
 <main>
-  {{ partial "blog/post-header" . }}
+  {{ partial "post/page-header" . }}
   <div class='flow-text'>{{ .Content }}</div>
 </main>
 {{ end }}
