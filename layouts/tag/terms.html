@@ -3,7 +3,9 @@
   {{ partial "main-title" . }}
   <ul class='styled-list term-list'>
     {{ range .Site.Taxonomies.tags.Alphabetical }}
-    <li class='styled-text term-text'><a href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a></li>
+    <li class='styled-text term-text'>
+      <a class='styled-link subtle-link' href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a>
+    </li>
     {{- end }}
   </ul>
 </main>

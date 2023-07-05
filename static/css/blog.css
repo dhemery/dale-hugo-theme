@@ -3,12 +3,12 @@
 
   .post-details {
     --list-style-display: inline;
+    --text-style-font-size: var(--FONT-SIZE-0);
     --list-style-item-display: inline;
     --list-style-item-separator: ' | ';
     --list-style-padding: 0;
-    --list-style-type: none;
-    --text-style-font-size: var(--FONT-SIZE-0);
     --text-style-transform: capitalize;
+    --list-style-type: none;
   }
 
   .post-page-header {}
@@ -31,6 +31,7 @@
     --list-style-item-display: inline;
     --list-style-item-separator: ' | ';
     --list-style-padding: 0;
+    --text-style-transform: capitalize;
     --list-style-type: none;
   }
 
