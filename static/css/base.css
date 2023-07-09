@@ -1,70 +1,57 @@
 @layer base {
-  :root {
+  :where(:root) {
     --COLOR-DARK: hsl(var(--USER-HUE) 100% 20%);
     --COLOR-MEDIUM: hsl(var(--USER-HUE) 20% 50%);
     --COLOR-LIGHT: hsl(var(--USER-HUE) 10% 92%);
     --COLOR-LIGHTEST: hsl(var(--USER-HUE), 5%, 98.5%);
 
-    --FONT-FAMILY: Arial, Helvetica, sans-serif;
-    --FONT-SCALE: calc(4.0 / 3.0);
-    --FONT-SIZE-0: calc(var(--FONT-SIZE-1) / VAR(--FONT-SCALE));
-    --FONT-SIZE-1: 1rem;
-    --FONT-SIZE-2: calc(var(--FONT-SIZE-1) * VAR(--FONT-SCALE));
-    --FONT-SIZE-3: calc(var(--FONT-SIZE-2) * VAR(--FONT-SCALE));
-    --FONT-SIZE-4: calc(var(--FONT-SIZE-3) * VAR(--FONT-SCALE));
-    --FONT-SIZE-5: calc(var(--FONT-SIZE-4) * var(--FONT-SCALE));
+    /* ratio 4/3 */
+    --font-size--1: 0.75rem;
+    --font-size-0: 1rem;
+    --font-size-1: 1.3333333333rem;
+    --font-size-2: 1.7777777778rem;
+    --font-size-3: 2.3703703704rem;
+
+    --font-family: Arial, Helvetica, sans-serif;
+    --line-height: 1.6;
+    --measure: 65ch;
+
+    --primary-color: var(--COLOR-DARK);
+    --accent-color: var(--COLOR-DARK);
+
+    --blockquote-background: var(--COLOR-LIGHT);
+    --blockquote-color: var(--primary-color);
+    --body-background: var(--COLOR-LIGHTEST);
+    --html-background: var(--COLOR-DARK);
+    --link-color: var(--accent-color);
   }
 
   html {
-    --font-family: var(--FONT-FAMILY);
-    --font-size: var(--FONT-SIZE-1);
-    --line-height: 1.5;
-
-    background-color: var(--COLOR-DARK);
+    background-color: var(--html-background);
     font-family: var(--font-family);
-    font-size: var(--font-size);
+    font-size: var(--font-size-0);
     line-height: var(--line-height);
   }
 
   body {
-    --body-bg: var(--COLOR-LIGHTEST);
-
-    background-color: var(--body-bg);
-    margin-block: var(--body-margin-block, 0);
-    margin-inline: var(--body-margin-inline, auto);
+    background-color: var(--body-background);
   }
 
   main {
-    --main-padding-block: 1rem;
-    --main-padding-inline: 1rem;
-    --main-max-width: calc(var(--USER-FLOW-WIDTH) + 2 * var(--main-padding-block));
-
-    margin-inline: var(--main-margin-inline, auto);
-    max-width: var(--main-max-width);
-    padding-block: var(--main-padding-block, 1rem);
-    padding-inline: var(--main-padding-inline, 1rem);
+    max-width: var(--measure);
+    margin-inline: auto;
+    padding-inline: 1rem;
   }
 
-
   a {
-    --link-color: var(--color);
-
     color: var(--link-color);
   }
 
   blockquote {
-    --blockquote-bg: var(--COLOR-LIGHT);
-    --blockquote-border: 1px solid var(--blockquote-border-color);
-    --blockquote-border-color: var(--COLOR-MEDIUM);
-    --blockquote-color: var(--COLOR-DARK);
-    --blockquote-padding-block: 1rem;
-    --blockquote-padding-inline: 1rem;
-
-    background-color: var(--blockquote-bg);
-    border: var(--blockquote-border);
+    border: 1px solid var(--blockquote-color);
+    background-color: var(--blockquote-background);
     color: var(--blockquote-color);
-    padding-block: var(--blockquote-padding-block);
-    padding-inline: var(--blockquote-padding-inline);
+    padding: 1rem;
   }
 
   :is(blockquote, em),
@@ -79,22 +66,17 @@
   }
 
   :is(h1, h2, h3, h4, h5, h6) {
-    font-size: var(--font-size);
+    color: var(--primary-color);
     font-weight: bold;
-    color: var(--color);
     line-height: 1.2em;
   }
 
   h1 {
-    --font-size: var(--FONT-SIZE-3);
+    font-size: var(--font-size-2);
   }
 
   h2 {
-    --font-size: var(--FONT-SIZE-2);
-  }
-
-  h3 {
-    --font-size: var(--FONT-SIZE-1);
+    font-size: var(--font-sizezz);
   }
 
   img {
@@ -102,9 +84,7 @@
   }
 
   :is(ul, ol) {
-    --list-padding-start: 2rem;
-
-    padding-left: var(--list-padding-start);
+    padding-left: 2rem;
   }
 
   strong {

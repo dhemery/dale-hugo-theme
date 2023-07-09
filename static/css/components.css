@@ -1,64 +1,55 @@
 @layer components {
 
-  .flow-text>* {
-    --flow-text-block-spacing: 1em;
-
-    margin-block-start: var(--flow-text-block-spacing);
+  .banner {
+    --padding-block: var(--banner-padding-block, 1rem);
+    --padding-inline: var(--banner-padding-inline, 1rem);
   }
 
-  .flow-text blockquote>:not(:first-child) {
-    margin-block-start: var(--flow-text-block-spacing);
+  .banner * {
+    color: var(--color);
   }
 
-  .page-header-box {
-    --box-margin-inline: auto;
-    --box-max-width: var(--USER-FLOW-WIDTH);
+  .banner a {
+    text-decoration: none;
   }
 
-  .page-title-text {
-    --box-bg: var(--COLOR-LIGHTER);
-    --box-padding-block: 0.5rem;
-    --text-style-color: var(--COLOR-DARK);
-    --text-style-font-size: var(--FONT-SIZE-4);
-    --text-style-font-variant: small-caps;
-    --text-style-font-weight: bold;
-    --text-style-line-height: 1.2;
+  .copyright {
+    text-align: center;
+    color: var(--color);
   }
 
-  .site-banner-box {
-    --box-bg: var(--COLOR-DARK);
-    --box-padding-block: 1rem;
-    --box-padding-inline: 1rem;
-    --text-style-align: center;
+  .footer {
+    --padding-block: .25rem;
   }
 
-  .site-footer-box {
-    --box-bg: var(--COLOR-DARK);
-    --box-padding-block: .25rem;
+  .page-header {
+    --background-color: var(--COLOR-LIGHTER);
+    --color: var(--COLOR-DARK);
+    --margin-inline: auto;
+    --max-width: var(--measure);
+    --wrapper-padding-block: 0.5rem;
   }
 
-  .site-footer-text {
-    --text-style-color: var(--COLOR-LIGHT);
-    --text-style-font-weight: bold;
-    --text-style-align: center;
+  .page-title {
+    --font-size: var(--page-title-size, var(--font-size-3));
   }
 
-  .site-nav-text {
-    --text-style-color: var(--COLOR-LIGHT);
+  .site-info {
+    --background-color: var(--site-info-background-color, var(--COLOR-DARK));
+    --color: var(--site-info-text-color, var(--COLOR-LIGHT));
+
+    text-align: var(--site-info-align, center);
   }
 
   .site-nav-list {
-    --list-style-display: inline;
-    --list-style-type: inline;
-    --list-style-item-separator: ' | ';
-    --list-style-font-variant: small-caps;
+    --separator: ' | ';
   }
 
-  .site-title-text {
-    --link-style-color: var(--text-style-color);
-    --text-style-color: var(--COLOR-LIGHT);
-    --text-style-font-size: var(--FONT-SIZE-5);
-    --text-style-font-variant: small-caps;
-    --text-style-line-height: 1.2;
+  .site-title {
+    font-size: var(--site-titl--size, var(--font-size-3));
+  }
+
+  .title-font {
+    font-variant: var(--title-font-variant, small-caps);
   }
 }

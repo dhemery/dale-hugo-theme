@@ -1,46 +1,47 @@
 @layer utilities {
-	.boxed {
-		background-color: var(--box-bg);
-		border: var(--box-border);
-		margin-block: var(--box-margin-block);
-		margin-inline: var(--box-margin-inline);
-		padding-block: var(--box-padding-block);
-		padding-inline: var(--box-padding-inline);
+	.box {
+		background-color: var(--background-color);
+		border: var(--border);
 	}
 
-	.styled-link {
-		--link-style-decoration: underline;
+	.colored-text {
+		color: var(--color);
+	}
 
-		color: var(--link-style-color, var(--color));
-		text-decoration: var(--link-style-decoration);
+	.display-text {
+		font-weight: var(--font-weight, bold);
+		line-height: var(--line-height, 1.1);
+	}
+
+	.flow is(*, blockquote>:not(:first-child)) {
+		margin-block-start: var(--flow-space);
+	}
+
+	.inline {
+		display: inline;
+	}
+
+	.separated:not(:first-child)::before {
+		content: var(--separator);
 	}
 
 	.styled-list {
-		display: var(--list-style-display);
 		list-style-type: var(--list-style-type);
-		padding-block: var(--list-style-padding-block);
-		padding-inline: var(--list-style-padding-inline);
-	}
-
-	.styled-list>li {
-		display: var(--list-style-item-display);
-	}
-
-	.styled-list>li:not(:first-child)::before {
-		content: var(--list-style-item-separator);
-	}
-
-	.styled-text {
-		color: var(--text-style-color);
-		font-size: var(--text-style-font-size);
-		font-weight: var(--text-style-font-weight);
-		font-variant: var(--text-style-font-variant);
-		line-height: var(--text-style-line-height);
-		text-align: var(--text-style-align);
-		text-transform: var(--text-style-transform);
 	}
 
 	.subtle-link:not(:hover, :focus) {
-		--link-style-decoration: none;
+		text-decoration: none;
+	}
+
+	.variant-text {
+		font-variant: var(--font-variant, none);
+		text-transform: var(--text-transform);
+	}
+
+	.wrapper {
+		margin-block: var(--margin-block, 1rem);
+		margin-inline: var(--margin-inline, 1rem);
+		padding-block: var(--padding-block, 1rem);
+		padding-inline: var(--padding-inline, 1rem);
 	}
 }
