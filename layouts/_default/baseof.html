@@ -14,25 +14,25 @@
 </head>
 
 <body>
-  <header class='banner site-info wrapper box'>
-    <div class='site-title title-font'>
-      <a href='/'>{{ .Site.Title }}</a>
-    </div>
-    <nav class='site-nav'>
-      <ul class='inline site-nav-list'>
+  <header class='site-info'>
+    <a class='site-title title-font-variant subtle-link' href='/'>{{ .Site.Title }}</a>
+    <nav>
+      <ul>
         {{ range .Site.Data.nav.link }}
-        <li class='separated inline site-nav-item'>
-          <a href="{{ .url }}">{{ .title }}</a>
+        <li data-separator='|'>
+          <a class='display-font subtle-link' href="{{ .url }}">{{ .title }}</a>
         </li>
         {{ end }}
       </ul>
     </nav>
   </header>
   {{ block "main" . }}{{ end }}
-  <footer class='footer site-info box wrapper'>
-    <div class='copyright' role='copyright'>
-      {{ block "copyright" . }}{{ .Site.Copyright }}{{ end }}
+  <footer class='site-info'>
+    {{ block "copyright" . }}
+    <div role='copyright'>
+      {{ .Site.Copyright }}
     </div>
+    {{ end }}
   </footer>
 </body>
 

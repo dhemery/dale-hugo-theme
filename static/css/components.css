@@ -1,55 +1,31 @@
 @layer components {
-
-  .banner {
-    --padding-block: var(--banner-padding-block, 1rem);
-    --padding-inline: var(--banner-padding-inline, 1rem);
-  }
-
-  .banner * {
-    color: var(--color);
-  }
-
-  .banner a {
-    text-decoration: none;
-  }
-
-  .copyright {
-    text-align: center;
-    color: var(--color);
-  }
-
-  .footer {
-    --padding-block: .25rem;
+  :root {
+    --page-header-color: var(--COLOR-DARK);
+    --site-info-color: var(--COLOR-LIGHT);
+    --site-info-bg: var(--COLOR-DARK);
+    --site-title-font: var(--display-font);
+    --site-title-size: var(--size-xxxl);
   }
 
   .page-header {
-    --background-color: var(--COLOR-LIGHTER);
-    --color: var(--COLOR-DARK);
-    --margin-inline: auto;
-    --max-width: var(--measure);
-    --wrapper-padding-block: 0.5rem;
+    color: var(--page-header-color);
+    margin-inline: auto;
+    max-width: var(--measure);
   }
 
-  .page-title {
-    --font-size: var(--page-title-size, var(--font-size-3));
-  }
+  .page-title {}
 
   .site-info {
-    --background-color: var(--site-info-background-color, var(--COLOR-DARK));
-    --color: var(--site-info-text-color, var(--COLOR-LIGHT));
-
-    text-align: var(--site-info-align, center);
-  }
-
-  .site-nav-list {
-    --separator: ' | ';
+    background-color: var(--site-info-bg);
+    color: var(--site-info-color);
+    font-variant: var(--site-title-font-variant);
+    padding: var(--size-m);
+    text-align: center;
   }
 
   .site-title {
-    font-size: var(--site-titl--size, var(--font-size-3));
-  }
-
-  .title-font {
-    font-variant: var(--title-font-variant, small-caps);
+    font-face: var(--site-title-font);
+    font-variant: var(--site-title-font-variant);
+    font-size: var(--site-title-size);
   }
 }

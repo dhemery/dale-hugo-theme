@@ -1,28 +1,15 @@
 @layer utilities {
 	.box {
-		background-color: var(--background-color);
+		background-color: var(--bg);
 		border: var(--border);
 	}
 
-	.colored-text {
-		color: var(--color);
+	.display-font {
+		font-face: var(--display-font);
 	}
 
-	.display-text {
-		font-weight: var(--font-weight, bold);
-		line-height: var(--line-height, 1.1);
-	}
-
-	.flow is(*, blockquote>:not(:first-child)) {
-		margin-block-start: var(--flow-space);
-	}
-
-	.inline {
-		display: inline;
-	}
-
-	.separated:not(:first-child)::before {
-		content: var(--separator);
+	.center {
+		text-align: center;
 	}
 
 	.styled-list {
@@ -33,9 +20,8 @@
 		text-decoration: none;
 	}
 
-	.variant-text {
-		font-variant: var(--font-variant, none);
-		text-transform: var(--text-transform);
+	.title-font-variant {
+		font-variant: var(--title-font-variant, small-caps);
 	}
 
 	.wrapper {

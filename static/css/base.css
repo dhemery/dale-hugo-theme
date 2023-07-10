@@ -1,55 +1,94 @@
 @layer base {
-  :where(:root) {
+  :root {
     --COLOR-DARK: hsl(var(--USER-HUE) 100% 20%);
     --COLOR-MEDIUM: hsl(var(--USER-HUE) 20% 50%);
     --COLOR-LIGHT: hsl(var(--USER-HUE) 10% 92%);
     --COLOR-LIGHTEST: hsl(var(--USER-HUE), 5%, 98.5%);
 
     /* ratio 4/3 */
-    --font-size--1: 0.75rem;
-    --font-size-0: 1rem;
-    --font-size-1: 1.3333333333rem;
-    --font-size-2: 1.7777777778rem;
-    --font-size-3: 2.3703703704rem;
+    --scale-s: 0.75;
+    --scale-m: 1;
+    --scale-l: 1.3333333333;
+    --scale-xl: 1.7777777778;
+    --scale-xxl: 2.3703703704;
+    --scale-xxxl: 3.1604938272;
 
-    --font-family: Arial, Helvetica, sans-serif;
-    --line-height: 1.6;
+    --size-s: calc(1rem * var(--scale-s));
+    --size-m: calc(1rem * var(--scale-m));
+    --size-l: calc(1rem * var(--scale-l));
+    --size-xl: calc(1rem * var(--scale-xl));
+    --size-xxl: calc(1rem * var(--scale-xxl));
+    --size-xxxl: calc(1rem * var(--scale-xxxl));
+
     --measure: 65ch;
 
-    --primary-color: var(--COLOR-DARK);
-    --accent-color: var(--COLOR-DARK);
+    --text-font: Arial, Helvetica, sans-serif;
+    --display-font: var(--text-font);
 
-    --blockquote-background: var(--COLOR-LIGHT);
-    --blockquote-color: var(--primary-color);
-    --body-background: var(--COLOR-LIGHTEST);
-    --html-background: var(--COLOR-DARK);
-    --link-color: var(--accent-color);
+    --line-height: 1.6;
+    --display-text-line-height: 1.2;
+    --flow-space: 1em;
+
+    --html-bg: var(--COLOR-DARK);
+
+    --body-bg: var(--COLOR-LIGHTEST);
+
+    --main-padding: 1rem;
+
+    --blockquote-bg: var(--COLOR-LIGHT);
+    --blockquote-color: var(--COLOR-DARK);
+
+    --heading-color: var(--COLOR-DARK);
+    --heading-font: var(--display-font);
+    --heading-font-weight: bold;
+    --heading-line-height: var(--display-text-line-height);
+    --heading-space: 1.6em;
+    --heading-1-size: var(--size-xxl);
+    --heading-2-size: var(--size-xl);
+    --heading-3-size: var(--size-l);
+
+    --link-color: var(--COLOR-DARK);
+
+    --list-indent: 2rem;
+    --list-space: .25rem;
   }
 
   html {
-    background-color: var(--html-background);
-    font-family: var(--font-family);
-    font-size: var(--font-size-0);
+    background-color: var(--html-bg);
+    font-family: var(--text-font);
+    font-size: var(--size-m);
     line-height: var(--line-height);
   }
 
   body {
-    background-color: var(--body-background);
+    background-color: var(--body-bg);
   }
 
   main {
     max-width: var(--measure);
     margin-inline: auto;
-    padding-inline: 1rem;
+    padding: var(--main-padding);
   }
 
-  a {
-    color: var(--link-color);
+  main *+* {
+    margin-block-start: var(--flow-space);
+  }
+
+  a:has([data-separator]) {
+    display: inline;
+  }
+
+  [data-separator] {
+    display: inline;
+  }
+
+  [data-separator]:not(:first-child)::before {
+    content: attr(data-separator);
   }
 
   blockquote {
-    border: 1px solid var(--blockquote-color);
-    background-color: var(--blockquote-background);
+    border: 1px solid currentcolor;
+    background-color: var(--blockquote-bg);
     color: var(--blockquote-color);
     padding: 1rem;
   }
@@ -66,17 +105,23 @@
   }
 
   :is(h1, h2, h3, h4, h5, h6) {
-    color: var(--primary-color);
-    font-weight: bold;
-    line-height: 1.2em;
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font-weight);
+    line-height: var(--heading-line-height);
+    margin-block-start: var(--heading-space);
   }
 
   h1 {
-    font-size: var(--font-size-2);
+    font-size: var(--heading-1-size);
   }
 
   h2 {
-    font-size: var(--font-sizezz);
+    font-size: var(--heading-2-size);
+  }
+
+  h3 {
+    font-size: var(--heading-3-size);
   }
 
   img {
@@ -84,7 +129,13 @@
   }
 
   :is(ul, ol) {
-    padding-left: 2rem;
+    padding-left: var(--list-indent);
+  }
+
+  ul,
+  ol,
+  li {
+    margin-block-start: var(--list-space);
   }
 
   strong {
