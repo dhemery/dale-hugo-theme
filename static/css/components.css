@@ -1,31 +1,24 @@
 @layer components {
-  :root {
-    --page-header-color: var(--COLOR-DARK);
-    --site-info-color: var(--COLOR-LIGHT);
-    --site-info-bg: var(--COLOR-DARK);
-    --site-title-font: var(--display-font);
-    --site-title-size: var(--size-xxxl);
-  }
-
   .page-header {
-    color: var(--page-header-color);
+    color: var(--page-header-color, var(--display-text-color));
     margin-inline: auto;
-    max-width: var(--measure);
+    max-width: var(--content-text-measure);
   }
 
-  .page-title {}
+  .page-title {
+    font-weight: var(--display-text-weight-strong);
+  }
 
   .site-info {
-    background-color: var(--site-info-bg);
-    color: var(--site-info-color);
-    font-variant: var(--site-title-font-variant);
+    background-color: var(--brand-background-color);
+    color: var(--brand-text-color);
     padding: var(--size-m);
     text-align: center;
   }
 
   .site-title {
-    font-face: var(--site-title-font);
-    font-variant: var(--site-title-font-variant);
-    font-size: var(--site-title-size);
+    font-face: var(--site-title-font, var(--brand-text-font));
+    font-variant: var(--site-title-font-variant, var(--display-text-variant-strong));
+    font-size: var(--site-title-size, var(--size-xxxl));
   }
 }
