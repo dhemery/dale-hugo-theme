@@ -1,6 +1,8 @@
 <ul class='styled-text styled-list post-details'>
-	<li class='post-date'>{{ dateFormat "Jan 2, 2006" .Date }}</li>
+	<li data-separator='|'>{{ dateFormat "Jan 2, 2006" .Date }}</li>
 	{{ range (.GetTerms "tags") }}
-	<li class='post-tag'><a class='post-tag-link' href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a></li>
+	<li class='post-tag' data-separator=' | '><a class='post-tag-link' href='{{ .Page.RelPermalink }}'>{{ .Page.Title
+			}}</a>
+	</li>
 	{{- end }}
 </ul>

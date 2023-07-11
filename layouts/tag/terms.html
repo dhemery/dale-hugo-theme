@@ -1,10 +1,10 @@
 {{ define "main" }}
 <main class='tag-terms-page'>
   {{ partial "main-title" . }}
-  <ul class='styled-list term-list'>
+  <ul class='term-list'>
     {{ range .Site.Taxonomies.tags.Alphabetical }}
-    <li class='styled-text term-text'>
-      <a class='styled-link subtle-link' href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a>
+    <li class='term-text' data-separator='|'>
+      <a class='subtle-link' href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a>
     </li>
     {{- end }}
   </ul>

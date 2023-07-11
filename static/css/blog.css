@@ -2,40 +2,26 @@
   .post {}
 
   .post-details {
-    --list-style-display: inline;
-    --text-style-font-size: var(--FONT-SIZE-0);
-    --list-style-item-display: inline;
-    --list-style-item-separator: ' | ';
-    --list-style-padding: 0;
-    --text-style-transform: capitalize;
-    --list-style-type: none;
+    font-size: var(--size-s);
+    padding: 0;
+    text-transform: capitalize;
+    list-style-type: none;
   }
 
   .post-page-header {}
 
-  .post-summary {
-    margin-block: var(--post-summary-spacing, 1rem);
-  }
-
-  .post-summary-list {}
-
   .post-summary-title {
-    --text-style-font-size: var(--FONT-SIZE-2);
-    --text-style-font-variant: small-caps;
-    --text-style-font-weight: bold;
-    --text-style-color: var(--COLOR-DARK);
+    font-variant: var(--display-text-variant-strong);
+    font-weight: var(--display-text-weight-strong);
+    color: var(--display-text-color);
   }
 
   .term-list {
-    --list-style-display: inline;
-    --list-style-item-display: inline;
-    --list-style-item-separator: ' | ';
-    --list-style-padding: 0;
-    --text-style-transform: capitalize;
-    --list-style-type: none;
+    padding: 0;
+    list-style-type: none;
   }
 
   .term-text {
-    --text-style-transform: capitalize;
+    text-transform: capitalize;
   }
 }
