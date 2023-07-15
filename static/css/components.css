@@ -1,12 +1,12 @@
 @layer components {
   .page-header {
-    color: var(--page-header-color, var(--display-text-color));
-    margin-inline: auto;
+    color: var(--display-text-color);
     max-width: var(--content-text-measure);
   }
 
   .page-title {
     font-weight: var(--display-text-weight-strong);
+    font-variant: var(--display-text-variant-strong);
   }
 
   .site-info {
@@ -17,8 +17,8 @@
   }
 
   .site-title {
-    font-face: var(--site-title-font, var(--brand-text-font));
-    font-variant: var(--site-title-font-variant, var(--display-text-variant-strong));
-    font-size: var(--site-title-size, var(--size-xxxl));
+    font-face: var(--brand-text-font);
+    font-variant: var(--display-text-variant-strong);
+    font-size: var(--size-xxxl);
   }
 }

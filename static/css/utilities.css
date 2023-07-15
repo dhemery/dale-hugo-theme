@@ -8,7 +8,7 @@
 	}
 
 	.flow *+* {
-		padding-block-start: var(--content-flow-space);
+		padding-block-start: var(--content-flow-spacing);
 	}
 
 	.styled-list {
