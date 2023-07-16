@@ -1,9 +1,9 @@
 @layer base {
   :root {
-    --COLOR-DARK: hsl(var(--USER-HUE) 100% 20%);
-    --COLOR-MEDIUM: hsl(var(--USER-HUE) 20% 50%);
-    --COLOR-LIGHT: hsl(var(--USER-HUE) 10% 92%);
-    --COLOR-LIGHTEST: hsl(var(--USER-HUE), 5%, 98.5%);
+    --brand-color: black;
+    --brand-color-subtle: darkgray;
+    --on-brand-color: ghostwhite;
+    --on-brand-color-accent: gainsboro;
 
     /* ratio 4/3 */
     --scale-s: 0.75;
@@ -20,18 +20,13 @@
     --size-xxl: calc(1rem * var(--scale-xxl));
     --size-xxxl: calc(1rem * var(--scale-xxxl));
 
-    --brand-background-color: var(--COLOR-DARK);
+    --banner-background-color: var(--brand-color);
+    --banner-text-color: var(--on-brand-color);
 
-    --brand-text-color: var(--COLOR-LIGHT);
-    --brand-text-decoration-active: none;
-    --brand-text-decoration-hover: underline;
-    --brand-text-weight: medium;
-    --brand-text-weight-strong: bold;
-
-    --content-background-color: var(--COLOR-LIGHTEST);
+    --content-background-color: var(--on-brand-color);
 
     --content-text-color: black;
-    --content-text-color-active: var(--COLOR-DARK);
+    --content-text-color-active: var(--brand-color);
     --content-text-color-hover: var(--content-text-color-active);
     --content-text-font: Arial, Helvetica, sans-serif;
     --content-text-weight-strong: bold;
@@ -45,16 +40,16 @@
 
     --display-text-leading: 1.2;
     --display-text-font: var(--content-text-font);
-    --display-text-color: var(--COLOR-DARK);
+    --display-text-color: var(--brand-color);
     --display-text-variant-strong: small-caps;
     --display-text-weight: medium;
     --display-text-weight-strong: bold;
 
     --display-flow-spacing: 1em;
 
-    --exhibit-border-color: var(--COLOR-MEDIUM);
-    --exhibit-background-color: var(--COLOR-LIGHT);
-    --exhibit-text-color: var(--COLOR-DARK);
+    --exhibit-border-color: var(--brand-color-subtle);
+    --exhibit-background-color: var(--on-brand-color-accent);
+    --exhibit-text-color: var(--brand-color);
 
     --heading-1-size: var(--size-xxl);
     --heading-2-size: var(--size-xl);
@@ -80,7 +75,7 @@
     padding: var(--main-padding, 1rem);
   }
 
-  a:has([data-separator]) {
+  :is(ul, ol):has(li[data-separator]) {
     display: inline;
   }
 

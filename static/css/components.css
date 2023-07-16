@@ -10,14 +10,14 @@
   }
 
   .site-info {
-    background-color: var(--brand-background-color);
-    color: var(--brand-text-color);
+    background-color: var(--banner-background-color);
+    color: var(--banner-text-color);
     padding: var(--size-m);
     text-align: center;
   }
 
   .site-title {
-    font-face: var(--brand-text-font);
+    font-face: var(--display-text-font);
     font-variant: var(--display-text-variant-strong);
     font-size: var(--size-xxxl);
   }

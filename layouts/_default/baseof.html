@@ -9,18 +9,18 @@
   <title>{{ .Title }} | {{ .Site.Title }}</title>
   <link href='/favicon.ico' rel='icon' />
   <link rel='stylesheet' href='/css/theme.css'>
-  <link rel='stylesheet' href='/css/style.css'>
+  <link rel='stylesheet' href='/css/site.css'>
   {{ block "head-extras" . }}{{ partial "head-extras" . }}{{ end }}
 </head>
 
 <body>
   <header class='site-info'>
-    <a class='site-title title-font-variant subtle-link' href='/'>{{ .Site.Title }}</a>
+    <p class='site-title' href='/'>{{ .Site.Title }}</p>
     <nav>
-      <ul>
+      <ul class='nav-list'>
         {{ range .Site.Data.nav.link }}
-        <li data-separator='|'>
-          <a class='display-font subtle-link' href="{{ .url }}">{{ .title }}</a>
+        <li class='nav-item' data-separator='|'>
+          <a class='nav-link display-font' href="{{ .url }}">{{ .title }}</a>
         </li>
         {{ end }}
       </ul>

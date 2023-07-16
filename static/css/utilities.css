@@ -1,26 +1,10 @@
 @layer utilities {
-	.display-font {
-		font-face: var(--display-text-font);
-	}
-
 	.center {
 		text-align: center;
 	}
 
-	.flow *+* {
+	.flow>*+* {
 		padding-block-start: var(--content-flow-spacing);
-	}
-
-	.styled-list {
-		list-style-type: var(--list-style-type);
-	}
-
-	.subtle-link:not(:hover, :focus) {
-		text-decoration: none;
-	}
-
-	.title-font-variant {
-		font-variant: var(--display-text-variant-strong);
 	}
 
 	.wrapper {
