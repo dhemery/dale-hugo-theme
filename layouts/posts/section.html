@@ -1,6 +1,6 @@
 {{ define "main" }}
 <main class='post-section-page'>
-  {{ partial "main-title" . }}
+  <h1 class='page-title'>{{ .Title }}</h1>
   {{ partial "post/summary-list" .Pages.ByDate.Reverse }}
 </main>
 {{ end }}

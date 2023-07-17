@@ -1,6 +1,6 @@
 {{ define "main" }}
 <main class='term-list-page'>
-  {{ partial "main-title" . }}
+  <h1 class='page-title'>{{ .Title }}</h1>
   <ul class='term-list'>
     {{ range .Site.Taxonomies.tags.Alphabetical }}
     <li class='term-name' data-separator='|'>

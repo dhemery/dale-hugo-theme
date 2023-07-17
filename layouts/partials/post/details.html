@@ -1,5 +1,5 @@
 <ul class='post-details-list'>
-	<li class='post-date'>{{ dateFormat "Jan 2, 2006" .Date }}</li>
+	<li class='post-date' data-separator='|'>{{ dateFormat "Jan 2, 2006" .Date }}</li>
 	{{ range (.GetTerms "tags") }}
 	<li class='post-tag' data-separator='|'>
 		<a class='post-tag-link' href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a>

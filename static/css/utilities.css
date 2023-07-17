@@ -3,8 +3,12 @@
 		text-align: center;
 	}
 
+	.content {
+		margin-block: var(--content-flow-spacing);
+	}
+
 	.flow>*+* {
-		padding-block-start: var(--content-flow-spacing);
+		margin-block-start: var(--content-flow-spacing);
 	}
 
 	.wrapper {

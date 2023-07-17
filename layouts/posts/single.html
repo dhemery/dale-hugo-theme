@@ -1,10 +1,10 @@
 {{ define "main" }}
-<main class='post-page flow'>
+<main class='post-page'>
   <hgroup class='post-page-header'>
-    {{ partial "main-title" . }}
+    <h1 class='page-title'>{{ .Title }}</h1>
     {{ partial "post/details" . }}
   </hgroup>
-  <div>{{ .Content }}</div>
+  <div class='content flow'>{{ .Content }}</div>
 </main>
 {{ end }}
 
