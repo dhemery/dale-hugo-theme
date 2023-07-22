@@ -1,9 +1,7 @@
 @layer base {
   :root {
     --brand-color: black;
-    --brand-color-subtle: darkgray;
-    --on-brand-color: ghostwhite;
-    --on-brand-color-accent: gainsboro;
+    --on-brand-color: white;
 
     /* ratio 4/3 */
     --scale-s: 0.75;
@@ -24,7 +22,6 @@
     --banner-text-color: var(--on-brand-color);
 
     --content-background-color: var(--on-brand-color);
-
     --content-text-color: black;
     --content-text-color-active: var(--brand-color);
     --content-text-color-hover: var(--content-text-color-active);
@@ -47,8 +44,8 @@
 
     --display-flow-spacing: 1em;
 
-    --exhibit-border-color: var(--brand-color-subtle);
-    --exhibit-background-color: var(--on-brand-color-accent);
+    --exhibit-border-color: var(--brand-color);
+    --exhibit-background-color: var(--content-background-color);
     --exhibit-text-color: var(--brand-color);
 
     --heading-1-size: var(--size-xxl);
