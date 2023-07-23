@@ -1,4 +1,4 @@
-@layer components {
+@layer blocks {
   .page-header {
     color: var(--display-text-color);
     max-width: var(--content-text-measure);

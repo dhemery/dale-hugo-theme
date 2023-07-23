@@ -1,20 +1,9 @@
 @layer utilities {
-	.center {
-		text-align: center;
-	}
-
 	.content {
 		margin-block: var(--content-flow-spacing);
 	}
 
 	.flow>*+* {
 		margin-block-start: var(--content-flow-spacing);
-	}
-
-	.wrapper {
-		margin-block: var(--margin-block, 1rem);
-		margin-inline: var(--margin-inline, 1rem);
-		padding-block: var(--padding-block, 1rem);
-		padding-inline: var(--padding-inline, 1rem);
 	}
 }
