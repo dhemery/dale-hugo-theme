@@ -9,6 +9,19 @@
     font-variant: var(--display-text-variant-strong);
   }
 
+  .post-details-list {
+    font-size: var(--size-s);
+    padding: 0;
+    text-transform: capitalize;
+    list-style-type: none;
+  }
+
+  .post-summary-title {
+    font-variant: var(--display-text-variant-strong);
+    font-weight: var(--display-text-weight-strong);
+    color: var(--display-text-color);
+  }
+
   .site-info {
     background-color: var(--banner-background-color);
     color: var(--banner-text-color);
@@ -20,5 +33,14 @@
     font-face: var(--display-text-font);
     font-variant: var(--display-text-variant-strong);
     font-size: var(--size-xxxl);
+  }
+
+  .term-list {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .term-text {
+    text-transform: capitalize;
   }
 }
