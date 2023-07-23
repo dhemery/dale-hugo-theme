@@ -51,6 +51,7 @@
     --heading-1-size: var(--size-xxl);
     --heading-2-size: var(--size-xl);
     --heading-3-size: var(--size-l);
+    --main-width: var(--content-text-measure);
   }
 
   html {
@@ -67,7 +68,7 @@
   }
 
   main {
-    max-width: var(--content-text-measure);
+    max-width: var(--main-width);
     margin-inline: auto;
     padding: var(--main-padding, 1rem);
   }
