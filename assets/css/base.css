@@ -69,9 +69,8 @@
   }
 
   main {
-    max-width: var(--main-width);
     margin-inline: auto;
-    padding: var(--main-padding, 1rem);
+    padding: var(--content-flow-spacing);
   }
 
   blockquote {

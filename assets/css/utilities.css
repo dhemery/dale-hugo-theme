@@ -1,10 +1,6 @@
 @layer utilities {
-	.measured {
-		max-width: var(--content-text-measure);
-	}
-
 	.content {
-		margin-block: var(--content-flow-spacing);
+		max-width: var(--content-text-measure);
 	}
 
 	.flow>*+* {
