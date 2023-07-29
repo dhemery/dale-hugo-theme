@@ -63,6 +63,7 @@
 
   body {
     display: grid;
+    /* Push footer to bottom */
     grid-template-rows: auto 1fr auto;
     min-height: 100dvh;
   }
@@ -71,19 +72,6 @@
     max-width: var(--main-width);
     margin-inline: auto;
     padding: var(--main-padding, 1rem);
-  }
-
-  :is(ul, ol):has(li[data-separator]) {
-    display: inline;
-    padding-inline-start: 0;
-  }
-
-  [data-separator] {
-    display: inline;
-  }
-
-  [data-separator]:not(:first-child)::before {
-    content: attr(data-separator);
   }
 
   blockquote {
