@@ -1,8 +1,6 @@
-<ul class='post-details-list'>
-	<li class='post-date' data-separator='|'>{{ dateFormat "Jan 2, 2006" .Date }}</li>
-	{{ range (.GetTerms "tags") }}
-	<li class='post-tag' data-separator='|'>
-		<a class='post-tag-link' href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a>
-	</li>
+<ul class='post-meta list--bare'>
+	<li class='list-item--inline'>{{ dateFormat "Jan 2, 2006" .Date }}</li>
+	{{- range (.GetTerms "tags") -}}
+	<li class='tag list-item--inline'><a class='post-meta__link' href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a></li>
 	{{- end }}
 </ul>

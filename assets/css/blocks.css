@@ -7,28 +7,6 @@
     font-size: var(--size-xxxl);
   }
 
-  .bare-list {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .bare-list__item {
-    display: inline;
-  }
-
-  .nav {}
-
-  .nav__list {}
-
-  .nav__item {
-    margin-inline: .25em;
-    padding: .25em;
-  }
-
-  .nav__link {}
-
   .page-header {
     color: var(--display-text-color);
     max-width: var(--content-text-measure);
@@ -44,25 +22,5 @@
     color: var(--banner-text-color);
     padding: var(--size-m);
     text-align: center;
-  }
-
-  .post-meta {
-    font-size: var(--size-s);
-    text-transform: capitalize;
-  }
-
-  .post-summary__title {
-    font-variant: var(--display-text-variant-strong);
-    font-weight: var(--display-text-weight-strong);
-    color: var(--display-text-color);
-  }
-
-  .term-list {
-    padding: 0;
-    list-style-type: none;
-  }
-
-  .term-text {
-    text-transform: capitalize;
   }
 }

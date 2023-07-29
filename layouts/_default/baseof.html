@@ -21,20 +21,22 @@
   <header class='site-info banner'>
     <p class='banner__title' href='/'>{{ .Site.Title }}</p>
     <nav class='nav'>
-      <ul class='bare-list nav__list'>
-        {{ range .Site.Data.nav.link -}}
-        <li class='nav__item bare-list__item'><a class='nav__link' href="{{ .url }}">{{- .title -}}</a></li>
+      <ul class='nav__list list--bare'>
+        {{ range .Site.Data.nav.link }}
+        <li class='nav__item list-item--inline'>
+          <a class='nav__link' href="{{ .url }}">{{ .title }}</a>
+        </li>
         {{ end }}
       </ul>
     </nav>
   </header>
   {{ block "main" . }}{{ end }}
   <footer class='site-info footer'>
-    {{ block "copyright" . }}
     <div class='footer__copyright' role='copyright'>
+      {{ block "copyright" . }}
       {{ .Site.Copyright }}
+      {{ end }}
     </div>
-    {{ end }}
   </footer>
 </body>
 

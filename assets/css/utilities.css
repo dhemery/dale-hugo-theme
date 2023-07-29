@@ -6,4 +6,19 @@
 	.flow>*+* {
 		margin-block-start: var(--content-flow-spacing);
 	}
+
+	.list--bare {
+		list-style-type: none;
+		margin-block: 0;
+		padding: 0;
+	}
+
+	.list-item--inline {
+		display: inline;
+		margin: 0;
+	}
+
+	.list-item--inline:not(:last-child) {
+		margin-inline-end: 1ch;
+	}
 }

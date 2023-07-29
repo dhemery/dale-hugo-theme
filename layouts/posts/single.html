@@ -1,13 +1,13 @@
 {{ define "main" }}
-<main>
-  <hgroup class='post-header'>
-    <h1 class='page-title'>{{ .Title }}</h1>
+<main class='content flow'>
+  <hgroup class='page-header'>
+    <h1 class='page-header__title'>{{ .Title }}</h1>
     {{ partial "post/details" . }}
   </hgroup>
-  <div class='content flow'>{{ .Content }}</div>
+  <div class='flow'>{{ .Content }}</div>
 </main>
 {{ end }}
 
 {{ define "copyright" }}
-<p role='copyright'>© {{ dateFormat "2006" .Date }} Dale H. Emery</p>
+© {{ dateFormat "2006" .Date }} Dale H. Emery
 {{ end }}

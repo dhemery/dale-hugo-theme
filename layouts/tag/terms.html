@@ -1,12 +1,12 @@
 {{ define "main" }}
-<main class='term-list-page'>
-  <h1 class='page-title'>{{ .Title }}</h1>
-  <ul class='term-list'>
+<main class='content'>
+  <h1 class='page-header page-header__title'>{{ .Title }}</h1>
+  <ul class='term-list list--bare'>
     {{ range .Site.Taxonomies.tags.Alphabetical }}
-    <li class='term-name' data-separator='|'>
-      <a class='term-link' href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a>
+    <li class='tag list-item--inline'>
+      <a href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a>
     </li>
-    {{- end }}
+    {{ end }}
   </ul>
 </main>
 {{ end }}
