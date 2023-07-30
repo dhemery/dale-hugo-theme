@@ -2,9 +2,9 @@
 <main class='content'>
   <hgroup class='page-header'>
     <h1 class='page-header__title'>{{ .Title }}</h1>
-    {{ partial "post/meta" . }}
+    {{ partial "post-meta" . }}
   </hgroup>
-  <div class='flow'>{{ .Content }}</div>
+  {{ partial "page-content" . }}
 </main>
 {{ end }}
 

@@ -25,7 +25,12 @@
       </ul>
     </nav>
   </header>
-  {{ block "main" . }}{{ end }}
+  {{ block "main" . }}
+  <main class='content'>
+    {{ partial "page-header" . }}
+    {{ partial "page-content" . }}
+  </main>
+  {{ end }}
   <footer class='site-info footer'>
     <div class='footer__copyright' role='copyright'>
       {{ block "copyright" . }}

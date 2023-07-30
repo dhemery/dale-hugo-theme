@@ -1,10 +1,6 @@
 {{ define "main" }}
 <main class='content'>
-  <h1 class='page-header page-header__title'>{{ .Title }}</h1>
-  <div class='section-summary-list'>
-    {{ range .Pages }}
-    {{ .Render "summary" }}
-    {{ end }}
-  </div>
+  {{ partial "page-header" . }}
+  {{ partial "summary-list" .Pages }}
 </main>
 {{ end }}
