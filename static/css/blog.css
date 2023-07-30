@@ -1,15 +1,16 @@
 @layer blocks {
   .post-meta {
     font-size: var(--size-s);
-  }
-
-  .tag {
-    text-transform: capitalize;
+    display: flex;
   }
 
   .post-summary__title {
     font-variant: var(--display-text-variant-strong);
     font-weight: var(--display-text-weight-strong);
     color: var(--display-text-color);
+  }
+
+  .tag {
+    text-transform: capitalize;
   }
 }

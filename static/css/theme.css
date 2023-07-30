@@ -178,6 +178,18 @@
     font-size: var(--size-xxxl);
   }
 
+  .list--flex {
+    column-gap: 1ch;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .nav__list {
+    justify-content: center;
+  }
+
   .page-header {
     color: var(--display-text-color);
     max-width: var(--content-text-measure);
@@ -205,18 +217,4 @@
     margin-block-start: var(--content-flow-spacing);
   }
 
-  .list--bare {
-    list-style-type: none;
-    margin-block: 0;
-    padding: 0;
-  }
-
-  .list-item--inline {
-    display: inline;
-    margin: 0;
-  }
-
-  .list-item--inline:not(:last-child) {
-    margin-inline-end: 1ch;
-  }
 }

@@ -16,9 +16,9 @@
   <header class='site-info banner'>
     <p class='banner__title' href='/'>{{ .Site.Title }}</p>
     <nav class='nav'>
-      <ul class='nav__list list--bare'>
+      <ul class='nav__list list--flex'>
         {{ range .Site.Data.nav.link }}
-        <li class='nav__item list-item--inline'>
+        <li class='nav__item'>
           <a class='nav__link' href="{{ .url }}">{{ .title }}</a>
         </li>
         {{ end }}

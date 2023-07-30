@@ -1,9 +1,9 @@
 {{ define "main" }}
 <main class='content'>
   <h1 class='page-header page-header__title'>{{ .Title }}</h1>
-  <ul class='term-list list--bare'>
+  <ul class='term-list list--flex'>
     {{ range .Site.Taxonomies.tags.Alphabetical }}
-    <li class='tag list-item--inline'>
+    <li class='tag'>
       <a href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a>
     </li>
     {{ end }}
