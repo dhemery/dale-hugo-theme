@@ -1,8 +1,8 @@
 {{ define "main" }}
-<main class='content flow'>
+<main class='content'>
   <hgroup class='page-header'>
     <h1 class='page-header__title'>{{ .Title }}</h1>
-    {{ partial "post/details" . }}
+    {{ partial "post/meta" . }}
   </hgroup>
   <div class='flow'>{{ .Content }}</div>
 </main>
