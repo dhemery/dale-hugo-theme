@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class='content'>
   {{ partial "page-header" . }}
-  <ul class='term-list list--flex'>
+  <ul class='term-list'>
     {{ range .Site.Taxonomies.tags.Alphabetical }}
     <li class='tag'>
       <a href='{{ .Page.RelPermalink }}'>{{ .Page.Title }}</a>

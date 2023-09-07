@@ -13,4 +13,8 @@
   .tag {
     text-transform: capitalize;
   }
+
+  .term-list {
+      min-width: var(--content-text-measure);
+  }
 }
