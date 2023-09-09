@@ -1,6 +1,7 @@
 {{ define "main" }}
 <main class='content'>
   {{ partial "page-header" . }}
+  {{ .Content }}
   {{ partial "summary-list" .Pages.ByDate.Reverse }}
 </main>
 {{ end }}
