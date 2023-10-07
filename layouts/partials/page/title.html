@@ -1,0 +1,8 @@
+{{ $title := ""}}
+{{ if .Title }}
+{{ $title = .Title }}
+{{ else if .Type }}
+{{ $title = partial (path.Join .Type "title") . }}
+{{ end }}
+
+{{ return $title }}
