@@ -1,8 +1,12 @@
-{{ $title := ""}}
+{{ $title := .Scratch.Get "title" }}
+
+{{ if not $title }}
 {{ if .Title }}
 {{ $title = .Title }}
 {{ else if .Type }}
 {{ $title = partial (path.Join .Type "title") . }}
+{{ end }}
+{{ .Scratch.Set "title" $title }}
 {{ end }}
 
 {{ return $title }}
