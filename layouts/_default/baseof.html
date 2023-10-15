@@ -6,7 +6,7 @@
   <meta viewport='width=device-width' />
   <meta viewport='initial-scale=1' />
   <meta viewport='user-scalable=yes' />
-  <title>{{ partial "page/titlebar" . }}</title>
+  <title>{{ block "titlebar" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
   <link href='/favicon.ico' rel='icon' />
   <link rel='stylesheet' href='/css/theme.css'>
   <link rel='stylesheet' href='/css/site.css'>
