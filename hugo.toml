@@ -1,1 +1,3 @@
-# Theme config.
+[module.hugoVersion]
+extended=  false
+
